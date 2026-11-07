@@ -55,10 +55,10 @@ The whole service is one route over one CSV file.
     <td width="50%" valign="top">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/run-dark.webp">
-        <img src="docs/assets/readme/tour/run-light.webp" alt="Terminal output of three curl requests to the Monarch API">
+        <img src="docs/assets/readme/tour/run-light.webp" alt="Terminal output of eight curl requests to the Monarch API">
       </picture>
       <h3>API in action</h3>
-      Three requests: 1066 returns William I, 1588 returns Elizabeth I, and 500 is out of range.
+      Eight requests by year: 1066 returns William I, 1588 returns Elizabeth I, and 500 is out of range.
     </td>
     <td width="50%" valign="top">
       <picture>
@@ -81,10 +81,10 @@ The whole service is one route over one CSV file.
     <td width="50%" valign="top">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/years-dark.webp">
-        <img src="docs/assets/readme/tour/years-light.webp" alt="Terminal output of requests for 1952, 2021, 2022 and 2023">
+        <img src="docs/assets/readme/tour/years-light.webp" alt="Terminal output of requests for 1760, 1820, 1910, 1936, 1952 and 2022">
       </picture>
       <h3>Boundary years</h3>
-      When two reigns share a year the later monarch is returned, so 2022 gives Charles III.
+      When two reigns share a year the later monarch is returned, so 1936 gives George VI and 2022 gives Charles III.
     </td>
   </tr>
 </table>
