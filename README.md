@@ -48,6 +48,49 @@ The whole service is one route over one CSV file.
 | <img src="docs/assets/readme/icons/database.svg" width="18" height="18" alt=""> **Dataset included** | [data.csv](MonarchApi/data.csv) holds 66 rows of start year, end year and name, from Offa in 757 to Charles III from 2022. |
 | <img src="docs/assets/readme/icons/circle-check.svg" width="18" height="18" alt=""> **Clear out-of-range answer** | A year outside the data returns `Invalid Input (757 - <current year>)`. |
 
+## A quick tour
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/run-dark.webp">
+        <img src="docs/assets/readme/tour/run-light.webp" alt="Terminal output of three curl requests to the Monarch API">
+      </picture>
+      <h3>API in action</h3>
+      Three requests: 1066 returns William I, 1588 returns Elizabeth I, and 500 is out of range.
+    </td>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/query-dark.webp">
+        <img src="docs/assets/readme/tour/query-light.webp" alt="Code card of the Flask app that builds the year series and answers requests">
+      </picture>
+      <h3>The query code</h3>
+      A year-indexed pandas Series is built once at start-up and each request looks up its year.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/data-dark.webp">
+        <img src="docs/assets/readme/tour/data-light.webp" alt="Code card of the last rows of data.csv">
+      </picture>
+      <h3>The dataset</h3>
+      Start year, end year and name for each reign, ending with Elizabeth II and Charles III.
+    </td>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/years-dark.webp">
+        <img src="docs/assets/readme/tour/years-light.webp" alt="Terminal output of requests for 1952, 2021, 2022 and 2023">
+      </picture>
+      <h3>Boundary years</h3>
+      When two reigns share a year the later monarch is returned, so 2022 gives Charles III.
+    </td>
+  </tr>
+</table>
+
+<p align="center"><sub>Terminal cards are real runs of the app on localhost. Code cards show the files as they are in the repository.</sub></p>
+
 ## Features
 
 - Single GET route with a year query parameter.
